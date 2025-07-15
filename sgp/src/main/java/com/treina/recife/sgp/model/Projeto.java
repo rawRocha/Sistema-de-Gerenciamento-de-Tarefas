@@ -39,10 +39,10 @@ public class Projeto implements Serializable {
     private String descricao;
 
     @Column(name = "dataInicio", nullable = false)
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataInicio;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @Column(name = "dataConclusao", nullable = false)
     private LocalDate dataConclusao;
 
