@@ -37,10 +37,10 @@ public class Tarefa implements Serializable {
     private String titulo;
 
     @Column(name = "dataCriacao", nullable = false)
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataCriacao;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     @Column(name = "dataConclusao", nullable = false)
     private LocalDate dataConclusao;
 
