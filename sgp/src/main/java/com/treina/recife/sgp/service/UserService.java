@@ -19,4 +19,6 @@ public interface UserService {
     void deleteUsuario(long userId);
 
     boolean isEmailAlredyTaken(String email);
+
+    boolean isCpfAlredyTaken(String cpf);
 }

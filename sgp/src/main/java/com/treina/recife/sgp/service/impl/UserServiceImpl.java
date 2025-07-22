@@ -48,4 +48,9 @@ public class UserServiceImpl implements UserService {
         return usuarioRepository.existsByEmail(email);
     }
 
+    @Override
+    public boolean isCpfAlredyTaken(String cpf) {
+        return usuarioRepository.existsByCpf(cpf);
+    }
+
 }
