@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.treina.recife.sgp.constants.StatusUsuario;
 
 import jakarta.persistence.Column;
@@ -54,5 +55,6 @@ public class Usuario implements Serializable {
     private StatusUsuario status;
 
     @OneToMany(mappedBy = "responsavel")
+    @JsonManagedReference
     private List<Projeto> projetos = new ArrayList<>();
 }
