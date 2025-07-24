@@ -3,6 +3,7 @@ package com.treina.recife.sgp.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.treina.recife.sgp.constants.StatusProjeto;
 
@@ -48,6 +49,7 @@ public class Projeto implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "userId", referencedColumnName = "userId")
+    @JsonBackReference
     private Usuario responsavel;
 
     @Column(name = "STATUS", nullable = false)
